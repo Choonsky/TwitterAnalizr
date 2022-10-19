@@ -1,41 +1,25 @@
-package com.linkedin.api.azure;
+package com.choonsky.twitteranalizr.azure;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SentimentAnalysisResponse {
 
 	private List<TextDocumentScore> documents = new ArrayList<>();
 
-	public List<TextDocumentScore> getDocuments() {
-		return documents;
-	}
-
-	public void setDocuments(List<TextDocumentScore> documents) {
-		this.documents = documents;
-	}
-
+	@Data
 	public static class TextDocumentScore {
 
 		private String id;
 
 		private String sentiment;
-
-		public String getId() {
-			return id;
-		}
-
-		public void setId(String id) {
-			this.id = id;
-		}
-
-		public String getSentiment() {
-			return sentiment;
-		}
-
-		public void setSentiment(String sentiment) {
-			this.sentiment = sentiment;
-		}
 
 	}
 

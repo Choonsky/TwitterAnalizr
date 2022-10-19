@@ -1,18 +1,13 @@
-package com.linkedin.api.azure;
+package com.choonsky.twitteranalizr.azure;
+
+import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 public class TextAnalyticsRequest {
 
 	private List<TextDocument> documents = new ArrayList<>();
-
-	public List<TextDocument> getDocuments() {
-		return documents;
-	}
-
-	public void setDocuments(List<TextDocument> documents) {
-		this.documents = documents;
-	}
 
 }

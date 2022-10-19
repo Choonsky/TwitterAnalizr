@@ -1,38 +1,16 @@
-package com.linkedin.api.azure;
+package com.choonsky.twitteranalizr.azure;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SentimentAnalysis {
 
 	private TextDocument document;
 
 	private String sentiment;
 	
-	public SentimentAnalysis() {
-		
-	}
-
-	public SentimentAnalysis(TextDocument document) {
-		this.document = document;
-	}
-
-	public SentimentAnalysis(TextDocument document, String sentiment) {
-		this.document = document;
-		this.sentiment = sentiment.toLowerCase().trim();
-	}
-
-	public TextDocument getDocument() {
-		return document;
-	}
-
-	public void setDocument(TextDocument document) {
-		this.document = document;
-	}
-
-	public String getSentiment() {
-		return sentiment;
-	}
-
-	public void setSentiment(String sentiment) {
-		this.sentiment = sentiment;
-	}
-
 }
